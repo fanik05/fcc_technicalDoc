@@ -7,21 +7,21 @@
     </head>
     <body>
         <nav id="navbar">
-            <header><a href="#">Basics of Golang</a></header>
+            <header>Basics of Golang</header>
             <ul>
                 <li><a href="#What_is_Golang" class="nav-link">What is Golang?</a></li>
-                <li><a href="#" class="nav-link">Go Programs</a></li>
-                <li><a href="#" class="nav-link">Setting up Go Environment</a>
+                <li><a href="#Go_Programs" class="nav-link">Go Programs</a></li>
+                <li><a href="#Setting_up_Go_Environment" class="nav-link">Setting up Go Environment</a>
                     <ul>
-                        <li><a href="#" class="nav-link">Installation on UNIX/Linux/Mac OS X, and FreeBSD</a></li>
-                        <li><a href="#" class="nav-link">Installation on Windows</a></li>
+                        <li><a href="#Installation_on_UNIX_Linux_Mac_OS_X_and_FreeBSD" class="nav-link">Installation on UNIX/Linux/Mac OS X, and FreeBSD</a></li>
+                        <li><a href="#Installation_on_Windows" class="nav-link">Installation on Windows</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="nav-link">Getting Started with Golang</a>
+                <li><a href="#Getting_Started_with_Golang" class="nav-link">Getting Started with Golang</a>
                     <ul>
-                        <li><a href="#" class="nav-link">Packages</a></li>
-                        <li><a href="#" class="nav-link">Imports</a></li>
-                        <li><a href="#" class="nav-link">Functions</a></li>
+                        <li><a href="#Packages" class="nav-link">Packages</a></li>
+                        <li><a href="#Impports" class="nav-link">Imports</a></li>
+                        <li><a href="#Functions" class="nav-link">Functions</a></li>
                         <li><a href="#" class="nav-link">Variables</a></li>
                         <li><a href="#" class="nav-link">For Loop</a></li>
                         <li><a href="#" class="nav-link">Arrays</a></li>
@@ -54,8 +54,135 @@
                     <p>Download and install the latest 64-bit Go.Go installable archive file from (which also sets most of the environmental variables for you).</p>
                     <a href="https://golang.org/dl/">Click here to download</a>
                 </article>
+                <article id="Installation_on_UNIX_Linux_Mac_OS_X_and_FreeBSD">
+                    <header>Installation on UNIX/Linux/Mac OS X, and FreeBSD</header>
+                    <p>Extract the downloaded archive into /usr/local, creating a Go tree in /usr/local/go. For example:</p>
+                    <code>tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz</code>
+                    <p>Add /usr/local/go/bin to the PATH environment variable.</p>
+                </article>
+                <article id="Installation_on_Windows">
+                    <header>Installation on Windows</header>
+                    <p>
+                        Use the MSI file and follow the prompts to install the Go tools. By default, the installer uses the Go distribution in c:\Go. The installer should set the c:\Go\bin directory in windows PATH environment variable. Restart any open command prompts for the change to take effect.
+                    </p>
+                    <pre>
+                        <code>
+                            package main
+
+                            import "fmt"
+
+                            func main() {
+                                fmt.Println("Hello world!")
+                            }
+                        </code>
+                    </pre>
+                    <p>Now run the test.go to see the result:</p>
+                    <img src="https://hackernoon.com/hn-images/0*P9Othrs-PnMXO90-.png" alt="test.go result">
+                </article>
             </section>
-            <section class="main-section" id="Getting_Started_with_Golang"></section>
+            <section class="main-section" id="Getting_Started_with_Golang">
+                <header>Getting Started with Golang</header>
+                <article id="Packages">
+                    <header>Packages</header>
+                    <p>
+                        Every Go program is made up of packages. Programs start running in package main. This program is using the packages with import paths “fmt". Here is an example:
+                    </p>
+                    <pre>
+                        <code>
+                            package main
+
+                            import "fmt"
+
+                            func main() {
+                                fmt.Println("Hello world!")
+                            }
+                        </code>
+                    </pre>
+                </article>
+                <article id="Impports">
+                    <header>Imports</header>
+                    <p>We can write imports as</p>
+                    <pre>
+                        <code>
+                            import "fmt"
+                            import "math"
+                        </code>
+                    </pre>
+                    <p>Or</p>
+                    <pre>
+                        <code>
+                            import(
+                                "fmt"
+                                "math"
+                            )
+                        </code>
+                    </pre>
+                </article>
+                <article id="Functions">
+                    <header>Functions</header>
+                    <p>The general form of a function definition in Go programming language is as follows:</p>
+                    <pre>
+                        <code>
+                            func function_name([parameter list]) [return_types]
+                            {
+                                body of the function
+                            }
+                        </code>
+                    </pre>
+                    <p>
+                        A function can take zero or more arguments. In example below , add takes two parameters of type int. Notice that the type comes <i>after</i> the variable name.
+                    </p>
+                    <pre>
+                        <code>
+                            package main
+
+                            import "fmt"
+
+                            func add(a int, b int) int {
+                                return a + b
+                            }
+
+                            func main() {
+                                fmt.Println("sum is", add(10, 19))
+                            }
+                        </code>
+                    </pre>
+                    <p>Now run the function.go to see result</p>
+                    <img src="https://hackernoon.com/hn-images/0*ZSRnJ_rk5sTmeG8G.png" alt="function result">
+                </article>
+                <article>
+                    <header>Variables</header>
+                    <p>
+                        A variable definition means to tell the compiler where and how much to create the storage for the variable. A variable definition specifies a data type and also contains a list of one or more variables of that type as follows:
+                    </p>
+                    <code>var variable_list optional_data_type</code>
+                    <p>
+                        The var statement declares a list of variables; as in function argument lists, the type is last. A var statement can be at package or function level. We see both in the example below. 
+                    </p>
+                    <pre>
+                        <code>
+                            package main
+
+                            import "fmt"
+
+                            var node, golang, angular bool
+
+                            func main() {
+                                var x int
+                                fmt.Println(x, node, golang, angular)
+                            }
+                        </code>
+                    </pre>
+                    <p>Now run the variables.go to see result</p>
+                    <img src="https://hackernoon.com/hn-images/0*qv9uhegoZLEyOvOK.png" alt="variables result">
+                </article>
+                <article>
+                    <header>For Loop</header>
+                    <p>
+                        A for loop is a repetition control structure that will allow you to efficiently write a loop that needs to execute a specific number of times. The syntax of a for loop in Go programming language is:
+                    </p>
+                </article>
+            </section>
             <section class="main-section" id="Referances"></section>
         </main>
     </body>
