@@ -12,13 +12,13 @@
                 <li><a href="#What_is_Golang" class="nav-link">What is Golang?</a></li>
                 <li><a href="#Go_Programs" class="nav-link">Go Programs</a></li>
                 <li><a href="#Setting_up_Go_Environment" class="nav-link">Setting up Go Environment</a>
-                    <ul>
-                        <li><a href="#Installation_on_UNIX_Linux_Mac_OS_X_and_FreeBSD" class="nav-link">Installation on UNIX/Linux/Mac OS X, and FreeBSD</a></li>
+                    <ul class="drop-menu">
+                        <li><a href="#Installation_on_Linux_Mac" class="nav-link">Installation on Linux/Mac</a></li>
                         <li><a href="#Installation_on_Windows" class="nav-link">Installation on Windows</a></li>
                     </ul>
                 </li>
                 <li><a href="#Getting_Started_with_Golang" class="nav-link">Getting Started with Golang</a>
-                    <ul>
+                    <ul class="drop-menu">
                         <li><a href="#Packages" class="nav-link">Packages</a></li>
                         <li><a href="#Impports" class="nav-link">Imports</a></li>
                         <li><a href="#Functions" class="nav-link">Functions</a></li>
@@ -37,7 +37,6 @@
                 <header>What is Golang</header>
                 <article>
                     <p>Golang is a programming language initially developed at Google in year 2007 by Robert Griesemer, Rob Pike, and Ken Thompson. Go programming language is a statically-typed language with syntax similar to that of C. It provides garbage collection, type safety, dynamic-typing capability, many advanced built-in types such as variable length arrays and key-value maps. It also provides a rich standard library.</p>
-                    <img src="https://hackernoon.com/hn-images/0*fyyS1OHEaQ2il8Tg.png" alt="Golang LOGO">
                     <p>Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make it easy to write programs that get the most out of multi core and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It’s a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language.</p>
                 </article>
             </section>
@@ -52,13 +51,21 @@
                 <article>
                     <p>Environment setup can be done in few steps</p>
                     <p>Download and install the latest 64-bit Go.Go installable archive file from (which also sets most of the environmental variables for you).</p>
-                    <a href="https://golang.org/dl/">Click here to download</a>
+                    <a href="https://golang.org/dl/" target="_blank">Click here to download</a>
                 </article>
-                <article id="Installation_on_UNIX_Linux_Mac_OS_X_and_FreeBSD">
-                    <header>Installation on UNIX/Linux/Mac OS X, and FreeBSD</header>
-                    <p>Extract the downloaded archive into /usr/local, creating a Go tree in /usr/local/go. For example:</p>
-                    <code>tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz</code>
-                    <p>Add /usr/local/go/bin to the PATH environment variable.</p>
+                <article id="Installation_on_Linux_Mac">
+                    <header>Installation on Linux/Mac</header>
+                    <ul>
+                        <li>
+                            Extract the downloaded archive into /usr/local, creating a Go tree in /usr/local/go. For example:
+                            <code>
+                                tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz
+                            </code>
+                        </li>
+                        <li>
+                            Add /usr/local/go/bin to the PATH environment variable.
+                        </li>
+                    </ul>
                 </article>
                 <article id="Installation_on_Windows">
                     <header>Installation on Windows</header>
