@@ -34,6 +34,7 @@
                 </ul>
             </nav>
             <main id="main-doc">
+                <div class="responsive-div"></div>
                 <section class="main-section" id="What_is_Golang">
                     <header>What is Golang</header>
                     <article>
@@ -50,27 +51,26 @@
                 <section class="main-section" id="Setting_up_Go_Environment">
                     <header>Setting up Go Environment</header>
                     <article>
-                        <p>Environment setup can be done in few steps</p>
-                        <p>Download and install the latest 64-bit Go.Go installable archive file from (which also sets most of the environmental variables for you).</p>
-                        <a href="https://golang.org/dl/" target="_blank">Click here to download</a>
+                        <p>
+                            Environment setup can be done in few steps. Download and install the latest 64-bit Go.Go installable archive file from (which also sets most of the environmental variables for you).
+                        </p>
+                        <a href="https://golang.org/dl/" target="_blank" class="third-party-link">Click here to download</a>
                     </article>
-                    <article id="Installation_on_Linux_Mac">
-                        <header>Installation on Linux/Mac</header>
-                        <ul>
+                    <article id="Installation_on_Linux_Mac" class="sub-section">
+                        <header class="sub-header">Installation on Linux/Mac</header>
+                        <ul class="article-list">
                             <li>
                                 Extract the downloaded archive into /usr/local, creating a Go tree in /usr/local/go. For example:
                                 <br>
-                                <code>
-                                    tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz
-                                </code>
+                                <code class="bash-code">tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz</code>
                             </li>
                             <li>
                                 Add /usr/local/go/bin to the PATH environment variable.
                             </li>
                         </ul>
                     </article>
-                    <article id="Installation_on_Windows">
-                        <header>Installation on Windows</header>
+                    <article id="Installation_on_Windows" class="sub-section">
+                        <header class="sub-header">Installation on Windows</header class="sub-header">
                         <p>
                             Use the MSI file and follow the prompts to install the Go tools. By default, the installer uses the Go distribution in c:\Go. The installer should set the c:\Go\bin directory in windows PATH environment variable. Restart any open command prompts for the change to take effect.
                         </p>
@@ -81,30 +81,29 @@
                 </section>
                 <section class="main-section" id="Getting_Started_with_Golang">
                     <header>Getting Started with Golang</header>
-                    <article id="Packages">
-                        <header>Packages</header>
+                    <article id="Packages" class="sub-section">
+                        <header class="sub-header">Packages</header class="sub-header">
                         <p>
                             Every Go program is made up of packages. Programs start running in package main. This program is using the packages with import paths “fmt". Here is an example:
                         </p>
                         <img src="https://hackernoon.com/hn-images/0*Bh5B1NoAuSOGjuhw.png" alt="package">
                     </article>
-                    <article id="Impports">
-                        <header>Imports</header>
+                    <article id="Impports" class="sub-section">
+                        <header class="sub-header">Imports</header class="sub-header">
                         <p>We can write imports as</p>
                         <img src="https://hackernoon.com/hn-images/0*_YtLqRLiT52IyDVf.png" alt="import">
                         <p>Or</p>
                         <img src="https://hackernoon.com/hn-images/0*9MtUnykfj7qHtkZa.png" alt="import">
                     </article>
-                    <article id="Functions">
-                        <header>Functions</header>
+                    <article id="Functions" class="sub-section">
+                        <header class="sub-header">Functions</header class="sub-header">
                         <p>The general form of a function definition in Go programming language is as follows:</p>
                         <pre>
                             <code>
                                 func function_name([parameter list]) [return_types]
                                 {
                                     body of the function
-                                }
-                            </code>
+                                }</code>
                         </pre>
                         <p>
                             A function can take zero or more arguments. In example below , add takes two parameters of type int. Notice that the type comes <i>after</i> the variable name.
@@ -113,15 +112,14 @@
                         <p>Now run the function.go to see result</p>
                         <img src="https://hackernoon.com/hn-images/0*ZSRnJ_rk5sTmeG8G.png" alt="function result">
                     </article>
-                    <article id="Variables">
-                        <header>Variables</header>
+                    <article id="Variables" class="sub-section">
+                        <header class="sub-header">Variables</header class="sub-header">
                         <p>
                             A variable definition means to tell the compiler where and how much to create the storage for the variable. A variable definition specifies a data type and also contains a list of one or more variables of that type as follows:
                         </p>
                         <pre>
                             <code>
-                                var variable_list optional_data_type
-                            </code>
+                                var variable_list optional_data_type</code>
                         </pre>
                         <p>
                             The var statement declares a list of variables; as in function argument lists, the type is last. A var statement can be at package or function level. We see both in the example below. 
@@ -130,8 +128,8 @@
                         <p>Now run the variables.go to see result</p>
                         <img src="https://hackernoon.com/hn-images/0*qv9uhegoZLEyOvOK.png" alt="variables result">
                     </article>
-                    <article id="For_Loop">
-                        <header>For Loop</header>
+                    <article id="For_Loop" class="sub-section">
+                        <header class="sub-header">For Loop</header class="sub-header">
                         <p>
                             A <b>for</b> loop is a repetition control structure that will allow you to efficiently write a loop that needs to execute a specific number of times. The syntax of a <b>for</b> loop in Go programming language is:
                         </p>
@@ -140,13 +138,12 @@
                                 for [condition | ( init; condition; increament ) | Range]
                                 {
                                     statement(s);
-                                }
-                            </code>
+                                }</code>
                         </pre>
                         <p>
                             Go has only one looping construct, the for loop. The basic for loop has three components separated by semicolons:
                         </p>
-                        <ul>
+                        <ul class="article-list">
                             <li>the init statement: executed before the first iteration</li>
                             <li>the condition expression: evaluated before every iteration</li>
                             <li>the post statement: executed at the end of every iteration</li>
@@ -161,8 +158,8 @@
                         <p>Now run the for.go to see result</p>
                         <img src="https://hackernoon.com/hn-images/0*q87ENYlD6NDD3NAt.png" alt="for loop result">
                     </article>
-                    <article id="Arrays">
-                        <header>Arrays</header>
+                    <article id="Arrays" class="sub-section">
+                        <header class="sub-header">Arrays</header class="sub-header">
                         <p>
                             Go programming language also provides a data structure called <b>the array</b>, which can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
                         </p>
@@ -171,24 +168,21 @@
                         </p>
                         <pre>
                             <code>
-                                var variable_name [SIZE] variable_type
-                            </code>
+                                var variable_name [SIZE] variable_type</code>
                         </pre>
                         <p>
                             For example, to declare a 10-element array called <b>balance</b> of type float32, use this statement:
                         </p>
                         <pre>
                             <code>
-                                var balance [10] float32
-                            </code>
+                                var balance [10] float32</code>
                         </pre>
                         <p>
                             You can initialize array in Go either one by one or using a single statement as follows:
                         </p>
                         <pre>
                             <code>
-                                var balance = []float32{1000.0, 2.0, 3.4, 7.4, 50.0}
-                            </code>
+                                var balance = []float32{1000.0, 2.0, 3.4, 7.4, 50.0}</code>
                         </pre>
                         <p>
                             The type [n]T is an array of n values of type T. The expression <b>var a [10]int</b>  declares a variable a as an array of ten integers.
@@ -205,12 +199,12 @@
                         </p>
                         <img src="https://hackernoon.com/hn-images/0*UsF0rRvsKretX__J.png" alt="array result">
                     </article>
-                    <article id="Slices">
-                        <header>Slices</header>
+                    <article id="Slices" class="sub-section">
+                        <header class="sub-header">Slices</header class="sub-header">
                         <p>
                             Golang Slice is an abstraction over Go Array. As Go Array allows you to define type of variables that can hold several data items of the same kind but it do not provide any inbuilt method to increase size of it dynamically or get a sub array of its own. Slices covers this limitation. It provides many utility functions required on Array and is widely used in Go programming.
                         </p>
-                        <h5>Defining a slice</h5>
+                        <h3>Defining a slice</h3>
                         <p>
                             To define a slice, you can declare it as an array without specifying size or use <b>make</b> function to create the one.
                         </p>
@@ -228,12 +222,12 @@
                         </p>
                         <img src="https://hackernoon.com/hn-images/0*DP48tcWMc_GbPATG.png" alt="slice result">
                     </article>
-                    <article id="Structure">
-                        <header>Structure</header>
+                    <article id="Structure" class="sub-section">
+                        <header class="sub-header">Structure</header class="sub-header">
                         <p>
                             <b>Structure</b> in golang is a user defined data type available in Go programming, which also allows you to combine data items of different kinds.
                         </p>
-                        <h5>Defining a Structure</h5>
+                        <h3>Defining a Structure</h3>
                         <p>
                             To define a structure, you must use <b>type</b> and <b>struct</b> statements. The struct statement defines a new data type, with more than one member for your program. type statement binds a name with the type which is struct in our case. The format of the struct statement is this:
                         </p>
@@ -244,16 +238,14 @@
                                     member definition;
                                     ...
                                     member definition;
-                                }
-                            </code>
+                                }</code>
                         </pre>
                         <p>
                             Once a structure type is defined, it can be used to declare variables of that type using following syntax.
                         </p>
                         <pre>
                             <code>
-                                variable_name := structure_variable_type {value1, value2...valuen}
-                            </code>
+                                variable_name := structure_variable_type {value1, value2...valuen}</code>
                         </pre>
                         <p>
                             To access any member of a structure, we use the <b>member access operator (.)</b>. The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use <b>struct</b> keyword to define variables of structure type. Following is the example to explain usage of structure:
@@ -267,9 +259,9 @@
                 </section>
                 <section class="main-section" id="References">
                     <header>References</header>
-                    <a href="https://www.tutorialspoint.com/go/" target="_blank">tutorials point</a>
+                    <a href="https://www.tutorialspoint.com/go/" target="_blank" class="third-party-link">tutorials point</a>
                     <br>
-                    <a href="https://hackernoon.com/basics-of-golang-for-beginners-6bd9b40d79ae" target="_blank">hackernoon</a>
+                    <a href="https://hackernoon.com/basics-of-golang-for-beginners-6bd9b40d79ae" target="_blank" class="third-party-link">hackernoon</a>
                 </section>
             </main>
         </div>
