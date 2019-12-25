@@ -87,6 +87,14 @@ a {
     margin-bottom: 3%;
 }
 
+article {
+    margin-left: 2%;
+}
+
+.sub-header {
+    margin-left: 2%;
+}
+
 img {
     display: block;
     margin: 3%;
@@ -96,19 +104,15 @@ img {
 pre {
     font-size: 80%;
     position: relative;
-    right: 15%;
+    right: 2%;
 }
 
 .bash-code {
     font-size: 80%;
-    margin-left: 15%;
+    margin-left: 5%;
     display: block;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-}
-
-article {
-    margin-left: 2%;
 }
 
 .sub-header {
@@ -116,7 +120,7 @@ article {
 }
 
 .article-list {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-bottom: 1%;
 }
 
