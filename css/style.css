@@ -149,6 +149,12 @@ pre {
         height: 40vh;
         z-index: 50;
         font-size: 130%;
+        align-items: flex-start;
+    }
+
+    #navbar header,
+    .nav-menu {
+        margin-left: 8%;
     }
 
     #navbar > ul {
@@ -175,9 +181,11 @@ pre {
 
     pre {
         right: 55%;
+        font-size: 50%;
     }
 
     .bash-code {
         margin-left: 5%;
+        font-size: 50%;
     }
 }
