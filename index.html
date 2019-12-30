@@ -77,7 +77,16 @@
                             <p>
                                 Use the MSI file and follow the prompts to install the Go tools. By default, the installer uses the Go distribution in c:\Go. The installer should set the c:\Go\bin directory in windows PATH environment variable. Restart any open command prompts for the change to take effect.
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*hFnjTaY8hOV6aAHa.png" alt="verify installation">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        fmt.Println("Hello World!")
+                                    }</code>
+                            </pre>
                             <p>Now run the test.go to see the result:</p>
                             <img src="https://hackernoon.com/hn-images/0*P9Othrs-PnMXO90-.png" alt="test.go result">
                         </article>
@@ -91,16 +100,35 @@
                             <p>
                                 Every Go program is made up of packages. Programs start running in package main. This program is using the packages with import paths “fmt". Here is an example:
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*Bh5B1NoAuSOGjuhw.png" alt="package">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        fmt.Println("Hello World!")
+                                    }</code>
+                            </pre>
                         </article>
                     </section>
                     <section id="Imports" class="main-section">
                         <header class="sub-header">Imports</header class="sub-header">
                         <article>
                             <p>We can write imports as</p>
-                            <img src="https://hackernoon.com/hn-images/0*_YtLqRLiT52IyDVf.png" alt="import">
+                            <pre>
+                                <code>
+                                    import "fmt"
+                                    import "math"</code>
+                            </pre>
                             <p>Or</p>
-                            <img src="https://hackernoon.com/hn-images/0*9MtUnykfj7qHtkZa.png" alt="import">
+                            <pre>
+                                <code>
+                                    import(
+                                        "fmt"
+                                        "math"
+                                    )</code>
+                            </pre>
                         </article>
                     </section>
                     <section id="Functions" class="main-section">
@@ -117,7 +145,20 @@
                             <p>
                             A function can take zero or more arguments. In example below , add takes two parameters of type int. Notice that the type comes <i>after</i> the variable name.
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*fvkGTV9JLb1Ebogr.png" alt="function">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func add(a int, b int) int {
+                                        return a + b
+                                    }
+                                    
+                                    func main() {
+                                        fmt.Println("sum is", add(10, 19))
+                                    }</code>
+                            </pre>
                             <p>Now run the function.go to see result</p>
                             <img src="https://hackernoon.com/hn-images/0*ZSRnJ_rk5sTmeG8G.png" alt="function result">
                         </article>
@@ -135,7 +176,19 @@
                             <p>
                                 The var statement declares a list of variables; as in function argument lists, the type is last. A var statement can be at package or function level. We see both in the example below. 
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*G39BrXR3d0a45b-s.png" alt="variables">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    var node, golang, angular bool
+
+                                    func main() {
+                                        var x int
+                                        fmt.Println(x, node, golang, angular)
+                                    }</code>
+                            </pre>
                             <p>Now run the variables.go to see result</p>
                             <img src="https://hackernoon.com/hn-images/0*qv9uhegoZLEyOvOK.png" alt="variables result">
                         </article>
@@ -167,7 +220,20 @@
                             <p>
                                 <i>Note</i>: Unlike other languages like C, Java, or Javascript there are no parentheses surrounding the three components of the for statement and the braces { } are always required.
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*ls07kL0uWAMvpAby.png" alt="for loop">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        sum := 0
+                                        for i := 0; i < 8; i++ {
+                                            sum += i
+                                        }
+                                        fmt.Println("Total sum =", sum)
+                                    }</code>
+                            </pre>
                             <p>Now run the for.go to see result</p>
                             <img src="https://hackernoon.com/hn-images/0*q87ENYlD6NDD3NAt.png" alt="for loop result">
                         </article>
@@ -208,7 +274,23 @@
                             <p>
                                 Let us see an example
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*1iwDoTdz6qlN5p2B.png" alt="array">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        var a [2]string
+                                        a[0] = "Hello"
+                                        a[1] = "World"
+                                        fmt.Println(a[0], a[1])
+                                        fmt.println(a)
+
+                                        primes := [6]int{2, 3, 5 , 7, 11, 13}
+                                        fmt.Println(primes)
+                                    }</code>
+                            </pre>
                             <p>
                                 Now run the arr.go to see result
                             </p>
@@ -225,7 +307,12 @@
                             <p>
                                 To define a slice, you can declare it as an array without specifying size or use <b>make</b> function to create the one.
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*VgOr9U7ekY_VPgLb.png" alt="slice define">
+                            <pre>
+                                <code>
+                                    var numbers []int /* a slice of unspecified size */
+                                    /* numbers == []int{0, 0, 0 , 0, 0} */
+                                    numbers = make([]int, 5, 5) /* a slice of length 5 and capacity 5 */</code>
+                            </pre>
                             <p>
                                 An array has a fixed size. A slice, on the other hand, is a dynamically-sized, flexible view into the elements of an array. In practice, slices are much more common than arrays.
                             </p>
@@ -233,7 +320,21 @@
                                 The type []T is a slice with elements of type T. This expression creates a slice of the first five elements of the array a: <b>a[0:5]</b> 
                             </p>
                             <p>Let us understand it by an example</p>
-                            <img src="https://hackernoon.com/hn-images/0*zPXUo-MB2ckJ_1mX.png" alt="slice example">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        primes := [6]int{2, 3, 5 , 7, 11, 13}
+                                        fmt.Println(primes)
+
+                                        var s []int = primes[1:4]
+                                        fmt.Println(s)
+                                    }
+                                </code>
+                            </pre>
                             <p>
                                 Now run the slice.go to see result
                             </p>
@@ -269,7 +370,23 @@
                             <p>
                                 To access any member of a structure, we use the <b>member access operator (.)</b>. The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use <b>struct</b> keyword to define variables of structure type. Following is the example to explain usage of structure:
                             </p>
-                            <img src="https://hackernoon.com/hn-images/0*I2JVzNqLNXx0mnh3.png" alt="structure">
+                            <pre>
+                                <code>
+                                    package main
+
+                                    import "fmt"
+
+                                    type vertex struct {
+                                        X int
+                                        Y int
+                                    }
+
+                                    func main() {
+                                        v := Vertex{1, 2}
+                                        v.X = 4
+                                        fmt.PrintLn(v.X)
+                                    }</code>
+                            </pre>
                             <p>
                                 Now run the struct.go to see result
                             </p>
