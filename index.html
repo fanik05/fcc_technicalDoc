@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-tomorrow.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -68,7 +69,7 @@
                                 <li>
                                     Extract the downloaded archive into /usr/local, creating a Go tree in /usr/local/go. For example:
                                     <br>
-                                    <code class="language-bash">tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz</code>
+                                    <pre><code class="language-bash">$ tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz</code></pre>
                                 </li>
                                 <li>
                                     Add /usr/local/go/bin to the PATH environment variable.
@@ -95,58 +96,40 @@
                             <p>
                                 Every Go program is made up of packages. Programs start running in package main. This program is using the packages with import paths “fmt". Here is an example:
                             </p>
-                            <pre>
-                            <code class="language-go">
-                            package main
+                            <pre><code class="language-go line-numbers">                            package main
 
                             import "fmt"
 
                             func main() {
                                 fmt.Println("Hello World!")
-                            }
-                            </code>
-                            </pre>
+                            }</code></pre>
                         </article>
                     </section>
                     <section id="Imports" class="main-section">
                         <header class="sub-header">Imports</header class="sub-header">
                         <article>
                             <p>We can write imports as</p>
-                            <pre>
-                            <code class="language-go">
-                            import "fmt"
-                            import "math"
-                            </code>
-                            </pre>
+                            <pre><code class="language-go">                            import "fmt"
+                            import "math"</code></pre>
                             <p>Or</p>
-                            <pre>
-                            <code class="language-go">
-                            import(
+                            <pre><code class="language-go">                            import(
                                 "fmt"
                                 "math"
-                            )
-                            </code>
-                            </pre>
+                            )</code></pre>
                         </article>
                     </section>
                     <section id="Functions" class="main-section">
                         <header class="sub-header">Functions</header class="sub-header">
                         <article>
                             <p>The general form of a function definition in Go programming language is as follows:</p>
-                            <pre>
-                            <code class="language-go">
-                            func function_name([parameter list]) [return_types]
+                            <pre><code class="language-go">                            func function_name([parameter list]) [return_types]
                             {
                                 body of the function
-                            }
-                            </code>
-                            </pre>
+                            }</code></pre>
                             <p>
                             A function can take zero or more arguments. In example below , add takes two parameters of type int. Notice that the type comes <i>after</i> the variable name.
                             </p>
-                            <pre>
-                            <code class="language-go">
-                            package main
+                            <pre><code class="language-go">                            package main
 
                             import "fmt"
 
@@ -156,9 +139,7 @@
                             
                             func main() {
                                 fmt.Println("sum is", add(10, 19))
-                            }
-                            </code>
-                            </pre>
+                            }</code></pre>
                             <p>Now run the function.go to see result</p>
                             <img src="https://hackernoon.com/hn-images/0*ZSRnJ_rk5sTmeG8G.png" alt="function result">
                         </article>
@@ -169,17 +150,11 @@
                             <p>
                                 A variable definition means to tell the compiler where and how much to create the storage for the variable. A variable definition specifies a data type and also contains a list of one or more variables of that type as follows:
                             </p>
-                            <pre>
-                            <code class="language-go">
-                            var variable_list optional_data_type
-                            </code>
-                            </pre>
+                            <pre><code class="language-go">var variable_list optional_data_type</code></pre>
                             <p>
                                 The var statement declares a list of variables; as in function argument lists, the type is last. A var statement can be at package or function level. We see both in the example below. 
                             </p>
-                            <pre>
-                            <code class="language-go">
-                            package main
+                            <pre><code class="language-go">                            package main
 
                             import "fmt"
 
@@ -188,9 +163,7 @@
                             func main() {
                                 var x int
                                 fmt.Println(x, node, golang, angular)
-                            }
-                            </code>
-                            </pre>
+                            }</code></pre>
                             <p>Now run the variables.go to see result</p>
                             <img src="https://hackernoon.com/hn-images/0*qv9uhegoZLEyOvOK.png" alt="variables result">
                         </article>
@@ -415,6 +388,8 @@
             </main>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/prism-core.min.js"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     </body>
 </html>
