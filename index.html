@@ -87,6 +87,18 @@
                             <p>
                                 Use the MSI file and follow the prompts to install the Go tools. By default, the installer uses the Go distribution in c:\Go. The installer should set the c:\Go\bin directory in windows PATH environment variable. Restart any open command prompts for the change to take effect.
                             </p>
+                            <h3>Verify Installation</h3>
+                            <pre>
+                                <code class="language-go line-numbers">                            
+                                    package main
+
+                                    import "fmt"
+
+                                    func main() {
+                                        fmt.Println("Hello World!")
+                                    }
+                                </code>
+                            </pre>
                             <p>Now run the test.go to see the result:</p>
                             <img src="https://hackernoon.com/hn-images/0*P9Othrs-PnMXO90-.png" alt="test.go result">
                         </article>
